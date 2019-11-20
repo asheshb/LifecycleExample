@@ -8,14 +8,14 @@ internal class ScreenAnimation(){
     fun onResume() {
         Timber.i("onResume called")
         if(animating){
-            // resume animation
+            //start animation
         }
     }
 
     fun onPause() {
         Timber.i("onPause called")
         if(animating){
-            // pause animation
+            //stop animation
         }
     }
 
