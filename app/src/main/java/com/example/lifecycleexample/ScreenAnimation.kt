@@ -15,7 +15,7 @@ internal class ScreenAnimation(private val lifecycle: Lifecycle): LifecycleObser
     fun onResume() {
         Timber.i("onResume called")
         if(animating){
-            // resume animation
+            // start animation
         }
     }
 
@@ -23,7 +23,7 @@ internal class ScreenAnimation(private val lifecycle: Lifecycle): LifecycleObser
     fun onPause() {
         Timber.i("onPause called")
         if(animating){
-            // pause animation
+            // stop animation
         }
     }
 
@@ -32,7 +32,7 @@ internal class ScreenAnimation(private val lifecycle: Lifecycle): LifecycleObser
         animating = true
         if (lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) {
             Timber.i("startAnimation lifecycle is in resumed state")
-            //code to show animation
+            //start animation
         }
     }
 }
